@@ -1,6 +1,6 @@
 # 🎵 Music Streaming Habits Dashboard 2026 - Power BI
 
-([Overview Dashboard.png](https://github.com/Gnd10/music-streaming-habits-2026/blob/a35e4d19faef24064855bab7682875d37d2ac652/Overview%20Dashboard.png)) 
+![Overview Dashboard](https://github.com/Gnd10/music-streaming-habits-2026/blob/main/Overview-Dashboard.png?raw=true)
 
 ## 📊 About This Project
 
@@ -120,6 +120,8 @@ DIVIDE(
               'music_streaming_habits_2026'[uses_offline_mode] = TRUE()),
     [Total Users]
 )
+```
+
 💡 Actionable Recommendations
 Recommendation	Rationale	Priority
 Premium Conversion Campaign	45.5% Free users, 82.9% Premium active	🔴 High
