@@ -1,6 +1,6 @@
 # 🎵 Music Streaming Habits Dashboard 2026 - Power BI
 
-![Dashboard Preview](Overview Dashboard.png) 
+([Overview Dashboard.png](https://github.com/Gnd10/music-streaming-habits-2026/blob/a35e4d19faef24064855bab7682875d37d2ac652/Overview%20Dashboard.png)) 
 
 ## 📊 About This Project
 
