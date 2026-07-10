@@ -123,21 +123,36 @@ DIVIDE(
     [Total Users]
 )
 ```
+## 💡 Actionable Recommendations
 
-💡 Actionable Recommendations
-Recommendation	Rationale	Priority
-Premium Conversion Campaign	45.5% Free users, 82.9% Premium active	🔴 High
-Promote Offline Mode	Only 42.75% usage rate	🟡 Medium
-Focus on Top Markets	Japan, Canada, USA, Brazil, Nigeria	🔴 High
-Improve Workout Playlists	Highest skip rate (28.62%)	🟡 Medium
-Engage Teen Users	Underrepresented age group	🟢 Low
-Podcast Cross-Selling	Many users also listen to podcasts	🟢 Low
-🛠️ Tools & Technologies
-Data Visualization: Power BI Desktop
+Based on the analysis, here are key recommendations to drive platform growth:
 
-Data Source: CSV file (4,000 records)
+| Recommendation | Rationale | Priority |
+| :--- | :--- | :--- |
+| **Premium Conversion Campaign** | 45.5% Free users, 82.9% Premium active | 🔴 High |
+| **Promote Offline Mode** | Only 42.75% usage rate | 🟡 Medium |
+| **Focus on Top Markets** | Japan, Canada, USA, Brazil, Nigeria | 🔴 High |
+| **Improve Workout Playlists** | Highest skip rate (28.62%) | 🟡 Medium |
+| **Engage Teen Users** | Underrepresented age group (13-17) | 🟢 Low |
+| **Podcast Cross-Selling** | Many users also listen to podcasts | 🟢 Low |
 
-Documentation: GitHub Markdown
+### Priority Legend
+| Priority | Meaning |
+| :---: | :--- |
+| 🔴 High | Immediate action required |
+| 🟡 Medium | Plan for next quarter |
+| 🟢 Low | Consider for future roadmap |
+
+---
+
+## 🛠️ Tools & Technologies
+
+| Category | Technology |
+| :--- | :--- |
+| **Data Visualization** | Power BI Desktop |
+| **Data Source** | CSV file (4,000 records) |
+| **Documentation** | GitHub Markdown |
+| **Version Control** | GitHub |
 
 🤝 Contributing
 Contributions to improve the dashboard or add new analyses are welcome!
@@ -147,7 +162,6 @@ Ways to Contribute
 2. 🔍 Create additional DAX measures
 3. 📝 Improve documentation
 4. 🐛 Report issues
-
 
 📈 Future Enhancements
 1. Add forecasting for user growth
