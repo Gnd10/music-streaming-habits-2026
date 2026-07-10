@@ -1,6 +1,6 @@
-# 🎵 Music Streaming Habits Dashboard 2026
+# 🎵 Music Streaming Habits Dashboard 2026 - Power BI
 
-![Dashboard Preview](link_to_your_dashboard_screenshot.png) *(Optional: Add a screenshot of your dashboard)*
+![Dashboard Preview](Overview Dashboard.png) 
 
 ## 📊 About This Project
 
@@ -39,8 +39,115 @@ The main CSV file (`music_streaming_habits_2026.csv`) contains the following col
 
 *(And many more columns like `platform`, `playlists_count`, `uses_offline_mode`, etc.)*
 
-## 🚀 How to Use
+## 🚀 How to Use This Dashboard
 
-1.  **Clone the Repository**
-    ```bash
-    git clone https://github.com/Gnd10/music-streaming-habits-2026.git
+### Option 1: Open the Power BI File
+1. **Download** the `.pbix` file from this repository
+2. **Open** with Power BI Desktop (free download from Microsoft)
+3. **Explore** the interactive dashboards
+
+### Option 2: View Online
+- **Publish** to Power BI Service for web access
+- **Share** with stakeholders via Power BI Service
+
+### Option 3: Connect Your Own Data
+1. **Download** the `music_streaming_habits_2026.csv` file
+2. **Open** Power BI Desktop
+3. **Click** "Get Data" → "Text/CSV"
+4. **Select** the CSV file
+5. **Load** the data
+6. **Rebuild** or **Modify** the visualizations
+
+## 📊 Dashboard Features
+
+### Page 1: Overview
+- **Key Metrics Cards:** Total Users, Premium Active %, Avg. Songs/Day, Avg. Listening (min)
+- **Top Mood vs Total Users:** Bar chart showing top 5 moods
+- **Country vs Total Users:** Geographic distribution
+- **Subscription Distribution:** Pie chart (Free 45.5%, Premium 29.83%, Student 14.65%, Family 10.03%)
+- **Top 10 Favorite Artists:** Horizontal bar chart
+
+### Page 2: User Demographics
+- **Age Distribution:** Age vs Total Users
+- **Subscription by Age Group:** Stacked bar chart
+- **Country Distribution:** Map visualization
+- **Top 5 Countries by Subscription:** Stacked bar chart
+- **Listening Minutes by Age Group:** Bar chart
+- **Songs/Day by Country:** Combined chart
+
+### Page 3: Listening Behavior
+- **Top Mood vs Avg Skip Rate:** Bar chart
+- **Songs/Day vs Listening Minutes by Subscription:** Scatter plot
+- **Top Genre vs Avg Listening:** Bar chart
+- **Top Genre vs Avg Playlists:** Bar chart
+- **Average Songs by Age Group:** Bar chart
+- **Platform Distribution:** Additional metrics
+
+## 📈 DAX Measures Used
+
+```dax
+// Total Users
+Total Users = COUNTROWS('music_streaming_habits_2026')
+
+// Premium Active %
+Premium Active % = 
+DIVIDE(
+    CALCULATE(COUNTROWS('music_streaming_habits_2026'), 
+              'music_streaming_habits_2026'[subscription] = "Premium"),
+    [Total Users]
+)
+
+// Average Listening Minutes
+Avg Listening Minutes = 
+AVERAGE('music_streaming_habits_2026'[daily_listening_minutes])
+
+// Average Songs Per Day
+Avg Songs Per Day = 
+AVERAGE('music_streaming_habits_2026'[songs_per_day])
+
+// Active Users %
+Active Users % = 
+DIVIDE(
+    CALCULATE(COUNTROWS('music_streaming_habits_2026'), 
+              'music_streaming_habits_2026'[songs_per_day] > 0),
+    [Total Users]
+)
+
+// Offline Users %
+Offline Users % = 
+DIVIDE(
+    CALCULATE(COUNTROWS('music_streaming_habits_2026'), 
+              'music_streaming_habits_2026'[uses_offline_mode] = TRUE()),
+    [Total Users]
+)
+💡 Actionable Recommendations
+Recommendation	Rationale	Priority
+Premium Conversion Campaign	45.5% Free users, 82.9% Premium active	🔴 High
+Promote Offline Mode	Only 42.75% usage rate	🟡 Medium
+Focus on Top Markets	Japan, Canada, USA, Brazil, Nigeria	🔴 High
+Improve Workout Playlists	Highest skip rate (28.62%)	🟡 Medium
+Engage Teen Users	Underrepresented age group	🟢 Low
+Podcast Cross-Selling	Many users also listen to podcasts	🟢 Low
+🛠️ Tools & Technologies
+Data Visualization: Power BI Desktop
+
+Data Source: CSV file (4,000 records)
+
+Documentation: GitHub Markdown
+
+🤝 Contributing
+Contributions to improve the dashboard or add new analyses are welcome!
+
+Ways to Contribute
+1. 📊 Add new visualizations
+2. 🔍 Create additional DAX measures
+3. 📝 Improve documentation
+4. 🐛 Report issues
+
+
+📈 Future Enhancements
+1. Add forecasting for user growth
+2. Create drill-through pages for deeper analysis
+3. Implement row-level security for data protection
+4. Build custom visualizations using R/Python visuals
+5. Automate data refresh with Power BI Service
