@@ -150,7 +150,7 @@ Based on the analysis, here are key recommendations to drive platform growth:
 | Category | Technology |
 | :--- | :--- |
 | **Data Visualization** | Power BI Desktop |
-| **Data Source** | CSV file (4,000 records) |
+| **Data Source** | Kaggle https://www.kaggle.com/datasets/uditjain13/music-streaming-habits-2026 |
 | **Documentation** | GitHub Markdown |
 | **Version Control** | GitHub |
 
